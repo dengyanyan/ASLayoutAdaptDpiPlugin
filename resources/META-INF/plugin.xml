@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Android Dimen Adapt Dpi</name>
+  <version>1.0</version>
+  <vendor email="aaa@yourcompany.com" url="http://www.aaa.com">Mr.D</vendor>
+
+  <description><![CDATA[
+      Android屏幕适配插件,一键生成dpi适配目录,自动检查/替换dimen属性,并格式化XML文件
+    ]]>
+  </description>
+
+  <change-notes><![CDATA[
+      1. dpi适配,生成目录
+      2. XML文件dimen属性检查替换
+      3. XML格式化
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+
+    <action id="LayoutDimenAttrAdaptAction" class="com.andy.plugin.LayoutDimenAttrAdaptAction"
+            text="Replace Layout HardCode Dimen Attributes" description="ReplaceDimenAttr">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
